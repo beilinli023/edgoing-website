@@ -17,7 +17,14 @@
     "clear-cache:quick": "curl -X POST 'http://localhost:3000/api/admin/optimization' -H 'Content-Type: application/json' -d '{\"action\":\"invalidate_cache\",\"entityType\":\"blog\"}' || echo '请确保应用正在运行'",
     "performance:test": "node scripts/test-query-optimization.js",
     "performance:analyze": "node scripts/analyze-query-performance.js",
-    "performance:monitor": "node scripts/performance-monitor.js"
+    "performance:monitor": "node scripts/performance-monitor.js",
+
+    "db:migrate": "npx prisma migrate dev",
+    "db:push": "npx prisma db push",
+    "db:studio": "npx prisma studio",
+    "db:migrate-to-postgres": "node scripts/migrate-to-postgresql.js",
+    "vercel:build": "npx prisma generate && npm run build",
+    "vercel:check": "node scripts/vercel-deploy-check.js"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.3.1",

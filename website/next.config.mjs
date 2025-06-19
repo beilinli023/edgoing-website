@@ -7,8 +7,8 @@ const __dirname = dirname(__filename)
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 🚀 Docker 部署支持 - 独立输出
-  output: 'standalone',
+  // 🚀 部署支持 - 根据环境选择输出模式
+  output: process.env.VERCEL ? undefined : 'standalone',
 
   // 🚀 开发环境性能优化 - 关闭字体优化加快启动
   ...(process.env.NODE_ENV === 'development' && {
