@@ -79,7 +79,7 @@ git push
 
 1. **登录Vercel控制台**
 2. **导入项目**
-3. **设置根目录为 `website`**
+3. **⚠️ 重要：设置根目录为 `website`** - 这是解决"No Next.js version detected"错误的关键
 4. **配置环境变量**
 
 ### 步骤3: 数据库迁移
@@ -106,17 +106,22 @@ npx prisma db push
 
 ### 常见问题
 
-1. **404错误持续**
+1. **"No Next.js version detected" 错误**
+   - ⚠️ **必须设置根目录为 `website`**
+   - 在Vercel项目设置 → General → Root Directory 设置为 `website`
+   - 确保 `website/package.json` 中有 `next` 依赖
+
+2. **404错误持续**
    - 检查根目录设置
    - 验证vercel.json配置
    - 确认路由配置
 
-2. **数据库连接错误**
+3. **数据库连接错误**
    - 验证DATABASE_URL环境变量
    - 检查Prisma配置
    - 运行数据库迁移
 
-3. **构建失败**
+4. **构建失败**
    - 检查依赖版本冲突
    - 验证TypeScript配置
    - 查看构建日志
