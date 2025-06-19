@@ -1,0 +1,290 @@
+{
+  "nav": {
+    "home": "首页",
+    "programs": "游学国际",
+    "studyChina": "游学中国",
+    "about": "关于EdGoing",
+    "blog": "博客",
+    "contact": "开始项目"
+  },
+  "program": {
+    "projectType": "项目类型",
+    "academicFocus": "学术重点",
+    "city": "城市",
+    "gradeLevel": "年级",
+    "sessions": "营期",
+    "deadline": "截止日期",
+    "duration": "时长",
+    "innovation": "创新研究"
+  },
+  "countries": {
+    "singapore": "新加坡",
+    "usa": "美国",
+    "uk": "英国",
+    "canada": "加拿大"
+  },
+  "grades": {
+    "middleSchool": "中学",
+    "highSchool": "高中",
+    "university": "大学"
+  },
+  "breadcrumb": {
+    "learn": "学",
+    "observe": "观",
+    "create": "创",
+    "think": "思"
+  },
+  "tabs": {
+    "highlights": "项目亮点",
+    "features": "项目特色",
+    "itinerary": "行程安排",
+    "additional": "额外信息",
+    "academics": "学术",
+    "admission": "申请"
+  },
+  "sections": {
+    "projectHighlights": "项目亮点",
+    "projectFeatures": "项目特色",
+    "academicContent": "学术内容",
+    "itinerary": "行程安排",
+    "admissionRequirements": "申请要求",
+    "additionalInfo": "额外信息"
+  },
+
+  "additional": {
+    "requirements": "申请要求",
+    "materials": "申请材料"
+  },
+
+  "itinerary": {
+    "week1": "第一周：基础学习",
+    "week2": "第二周：深度实践"
+  },
+  "admission": {
+    "basicRequirements": "基本要求",
+    "applicationMaterials": "申请材料"
+  },
+  "image": "图片",
+  "hero": {
+    "explore": "Explore.",
+    "learn": "Learn.",
+    "grow": "Grow.",
+    "subtitle": "每一个 EdGoing 项目都是精心打造的探险之旅，旨在超越简单的观光——挑战固有观念、培养共情能力，并赋予学员以全新的方式看待世界和自我。。"
+  },
+  "banner": {
+    "summer2025": {
+      "title": "2025夏季游学计划启动",
+      "subtitle": "覆盖全球20+名校的深度体验项目",
+      "cta": "了解更多"
+    },
+    "ukElite": {
+      "title": "英国顶尖学府深度游学",
+      "subtitle": "探索牛津剑桥等世界名校",
+      "cta": "立即探索"
+    },
+    "japanTech": {
+      "title": "日本科技创新之旅",
+      "subtitle": "体验前沿科技与传统文化的碰撞",
+      "cta": "加入创新之旅"
+    },
+    "leadership": {
+      "title": "全球青年领袖峰会",
+      "subtitle": "培养下一代全球领袖",
+      "cta": "成为领袖"
+    },
+    "sustainable": {
+      "title": "可持续发展未来计划",
+      "subtitle": "学习塑造更绿色的明天",
+      "cta": "践行环保"
+    }
+  },
+  "whyChoose": {
+    "title": "学员支持与安全",
+    "subtitle": "我们优先考虑您的健康，在您的教育旅程中全天候提供全面的支持服务。",
+    "leadership": {
+      "title": "经验丰富的领导团队",
+      "description": "5年以上领导经验，应急处理能力强、清晰的行动指南和1:15的师生比例，提供个性化支持。"
+    },
+    "education": {
+      "title": "高质量教育项目",
+      "description": "由专家主导的课程，与顶级合作伙伴合作，提供卓越的教育体验。"
+    },
+    "accommodation": {
+      "title": "安全住宿和健康餐饮",
+      "description": "安全的住宿环境，严格的安全措施，以及适合各种饮食需求的营养均衡餐食。"
+    },
+    "support247": {
+      "title": "全天候支持",
+      "description": "全天候服务，为学员提供持续支持。"
+    },
+    "cultural": {
+      "title": "沉浸式文化体验",
+      "description": "互动活动，融入丰富的游览和当地参与，促进深度学习。"
+    },
+    "academic": {
+      "title": "受认可的学术卓越",
+      "description": "旨在提高学术表现和未来大学申请的课程"
+    }
+  },
+  "footer": {
+    "navigation": "导航",
+    "contactUs": "联系我们",
+    "followUs": "关注我们",
+    "nav": {
+      "home": "首页",
+      "worldStudy": "游学国际",
+      "chinaStudy": "游学中国",
+      "blog": "博客",
+      "about": "关于EdGoing",
+      "faq": "常见问题",
+      "contact": "开始项目"
+    },
+    "callUs": "联系电话",
+    "email": "邮箱",
+    "address": "地址",
+    "locations": "上海 | 新加坡",
+    "shanghai": "上海",
+    "shanghaiAddress": "上海市黄埔区黄陂南路838号",
+    "shanghaiDistrict": "中海国际B座18楼",
+    "singapore": "新加坡",
+    "singaporeAddress": "9 Kelantan Lane #06-01",
+    "singaporePostal": "Singapore 208628",
+    "followDescription": "通过社交媒体关注我们，了解最新动态和教育资讯",
+    "copyright": "2025 引里信息咨询（上海）有限公司 版权所有"
+  },
+  "partners": {
+    "title": "合作伙伴",
+    "subtitle": "与全球顶尖院校和教育机构建立深度合作关系，为学员提供优质的教育资源和学习机会。",
+    "universities": "合作院校",
+    "organizations": "合作机构",
+    "stats": {
+      "universities": "合作院校",
+      "countries": "覆盖国家",
+      "programs": "项目数量",
+      "students": "受益学员"
+    }
+  },
+  "common": {
+    "loading": "加载中..."
+  },
+  "programList": {
+    "type": "类型",
+    "city": "城市",
+    "duration": "时长",
+    "deadline": "截止日期",
+    "noPrograms": "暂无项目",
+    "noCityAssigned": "未分配城市"
+  },
+  "pagination": {
+    "previous": "上一页",
+    "next": "下一页"
+  },
+  "search": {
+    "filterPrograms": "筛选项目",
+    "programType": "项目类型",
+    "city": "城市",
+    "gradeLevel": "年级水平"
+  },
+  "programDetail": {
+    "projectType": "类型",
+    "duration": "时长",
+    "city": "城市",
+    "gradeLevel": "年级",
+    "sessions": "营期",
+    "deadline": "截止日期",
+    "projectIntroduction": "项目介绍",
+
+    "week1Title": "第一周：基础学习",
+    "week2Title": "第二周：进阶实践",
+    "defaultHighlights": {
+      "highlight1": "参观顶尖科技企业和创新中心",
+      "highlight2": "前沿技术的实践体验",
+      "highlight3": "与行业专业人士交流",
+      "highlight4": "文化沉浸和城市探索",
+      "highlight5": "合作院校颁发的结业证书"
+    },
+    "defaultAcademics": {
+      "academic1": "中国科技发展史",
+      "academic2": "人工智能应用案例",
+      "academic3": "5G技术发展",
+      "academic4": "科技创业生态",
+      "academic5": "创新与未来趋势"
+    },
+    "defaultItinerary": {
+      "week1": {
+        "item1": "第1-2天：深圳科技发展概览",
+        "item2": "第3-4天：华为参访体验",
+        "item3": "第5-6天：腾讯总部探访",
+        "item4": "第7天：科技园区深度游"
+      },
+      "week2": {
+        "item1": "第8-9天：创业孵化器参访",
+        "item2": "第10-11天：创新实验室工作坊",
+        "item3": "第12-13天：科技项目展示",
+        "item4": "第14天：项目结业与认证"
+      }
+    },
+    "defaultRequirements": {
+      "requirement1": "年龄16-24岁",
+      "requirement2": "理工科背景优先",
+      "requirement3": "对科技创新有浓厚兴趣",
+      "requirement4": "基本英语沟通能力"
+    }
+  },
+  "contact": {
+    "form": {
+      "fields": {
+        "privacyConsent": "我已阅读并同意",
+        "privacyPolicy": "隐私政策",
+        "role": {
+          "label": "您的身份*",
+          "placeholder": "请选择您的身份",
+          "student": "学生",
+          "parent": "家长",
+          "teacher": "教师",
+          "administrator": "学校管理员",
+          "consultant": "教育顾问",
+          "other": "其他"
+        },
+        "schoolName": "学校名称",
+        "firstName": "名字",
+        "lastName": "姓氏",
+        "email": "邮箱地址",
+        "phone": "联系电话",
+        "grade": "年级/学历",
+        "province": "省份",
+        "city": "城市",
+        "destinations": "意向目的地",
+        "learningInterests": "学习兴趣",
+        "message": "留言",
+        "consent": "我同意接收EdGoing的项目信息和更新"
+      },
+      "placeholders": {
+        "firstName": "请输入您的名字",
+        "lastName": "请输入您的姓氏",
+        "email": "请输入您的邮箱地址",
+        "phone": "请输入您的联系电话",
+        "schoolName": "请输入您的学校名称",
+        "grade": "请选择您的年级/学历",
+        "province": "请选择您的省份",
+        "city": "请选择您的城市",
+        "message": "请告诉我们您的需求和问题..."
+      },
+      "validation": {
+        "required": "此字段为必填项",
+        "email": "请输入有效的邮箱地址",
+        "phone": "请输入有效的电话号码",
+        "privacyRequired": "请阅读并同意隐私政策"
+      },
+      "success": {
+        "title": "提交成功",
+        "description": "感谢您的提交，我们会在2个工作日内联系您",
+        "simple": "提交成功"
+      },
+      "error": {
+        "title": "提交失败",
+        "description": "发生错误，请重试"
+      }
+    }
+  }
+}

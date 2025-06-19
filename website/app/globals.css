@@ -1,0 +1,423 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🚀 快速系统字体配置 */
+:root {
+  --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 系统字体类 */
+.font-system {
+  font-family: var(--font-system) !important;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* 移除图片的默认边框和背景 */
+  img {
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* 确保Next.js Image组件也没有边框 */
+  img[data-nimg] {
+    border: none !important;
+    background: transparent !important;
+  }
+}
+
+/* 确保所有文本使用系统字体 */
+body,
+input,
+textarea,
+button,
+select {
+  font-family: var(--font-system);
+}
+
+/* 统一文本大小 */
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+/* 确保表单元素使用一致的字体大小 */
+input,
+select,
+textarea {
+  font-size: 1rem;
+}
+
+/* 确保按钮文本使用一致的字体大小 */
+button {
+  font-size: 1rem;
+}
+
+/* 🎨 项目卡片增强效果样式 */
+
+/* 卡片悬浮动画 */
+.program-card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.program-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* 卡片光泽扫过效果 */
+.card-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease-in-out;
+  z-index: 1;
+}
+
+.program-card:hover .card-shine {
+  left: 100%;
+}
+
+/* 图片缩放效果 */
+.program-image {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.program-card:hover .program-image {
+  transform: scale(1.1);
+}
+
+/* 标签动画效果 */
+.program-tag {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.program-card:hover .program-tag {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* 内容区域动画 */
+.card-content {
+  transition: all 0.3s ease;
+}
+
+.program-card:hover .card-content {
+  transform: translateY(-2px);
+}
+
+/* 底部按钮滑入效果 */
+.view-details-btn {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.program-card:hover .view-details-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 截止日期警告动画 */
+.deadline-warning {
+  animation: pulse-warning 2s infinite;
+}
+
+@keyframes pulse-warning {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+}
+
+/* 信息点动画 */
+.info-dot {
+  animation: dot-pulse 2s infinite;
+}
+
+@keyframes dot-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* 渐变边框动画 */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 中国项目特殊渐变 */
+.china-gradient-border {
+  background: linear-gradient(45deg, #ef4444, #f97316, #eab308);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* 卡片加载动画 */
+.card-loading {
+  animation: card-fade-in 0.6s ease-out forwards;
+}
+
+@keyframes card-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .program-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+
+  .card-shine {
+    display: none; /* 移动端禁用光泽效果 */
+  }
+
+  /* ColorfulSlogan 移动端优化 */
+  .letter-wave-animation {
+    animation-duration: 6s; /* 移动端动画更慢 */
+  }
+
+  .colorful-glow {
+    animation-duration: 4s; /* 移动端光晕更慢 */
+  }
+}
+
+/* 减少动画模式支持 */
+@media (prefers-reduced-motion: reduce) {
+  .program-card,
+  .program-image,
+  .program-tag,
+  .card-content,
+  .view-details-btn {
+    transition: none;
+    animation: none;
+  }
+
+  .card-shine {
+    display: none;
+  }
+
+  .deadline-warning {
+    animation: none;
+  }
+
+  .info-dot {
+    animation: none;
+  }
+
+  .gradient-border,
+  .china-gradient-border {
+    animation: none;
+  }
+
+  /* ColorfulSlogan 减少动画模式 */
+  .colorful-word,
+  .colorful-glow,
+  .letter-wave-animation {
+    animation: none !important;
+  }
+}
+
+/* 🌟 ColorfulSlogan 动画效果 */
+@keyframes float-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes letter-wave {
+  0%, 100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotateZ(1deg);
+  }
+  75% {
+    transform: translateY(8px) rotateZ(-1deg);
+  }
+}
+
+/* ColorfulSlogan 样式类 */
+.colorful-word {
+  animation: float-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.colorful-word:hover {
+  animation: gentle-bounce 0.6s ease-in-out;
+}
+
+.colorful-glow {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.letter-wave-animation {
+  animation: letter-wave 4s ease-in-out infinite;
+}

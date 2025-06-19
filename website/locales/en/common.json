@@ -1,0 +1,294 @@
+{
+  "nav": {
+    "home": "Home",
+    "programs": "Study Abroad",
+    "studyChina": "Study in China",
+    "about": "About EdGoing",
+    "blog": "Blog",
+    "contact": "Start Project"
+  },
+  "program": {
+    "projectType": "Project Type",
+    "academicFocus": "Academic Focus",
+    "city": "City",
+    "gradeLevel": "Grade Level",
+    "sessions": "Sessions",
+    "deadline": "Deadline",
+    "duration": "Duration",
+    "innovation": "Innovation Research"
+  },
+  "countries": {
+    "singapore": "Singapore",
+    "usa": "United States",
+    "uk": "United Kingdom",
+    "canada": "Canada"
+  },
+  "grades": {
+    "middleSchool": "Middle School",
+    "highSchool": "High School",
+    "university": "University"
+  },
+  "breadcrumb": {
+    "learn": "Learn",
+    "observe": "Observe",
+    "create": "Create",
+    "think": "Think"
+  },
+  "tabs": {
+    "highlights": "Project Highlights",
+    "features": "Project Features",
+    "itinerary": "Itinerary",
+    "additional": "Additional Information",
+    "academics": "Academics",
+    "admission": "Admission"
+  },
+  "sections": {
+    "projectHighlights": "Project Highlights",
+    "projectFeatures": "Project Features",
+    "academicContent": "Academic Content",
+    "itinerary": "Itinerary",
+    "admissionRequirements": "Admission Requirements",
+    "additionalInfo": "Additional Information"
+  },
+  "features": {
+    "intro": "This program features the following unique characteristics:"
+  },
+  "additional": {
+    "requirements": "Application Requirements",
+    "materials": "Application Materials"
+  },
+  "academics": {
+    "intro": "This program combines theoretical learning with practical experience, covering the following academic modules:"
+  },
+  "itinerary": {
+    "week1": "Week 1: Foundation Learning",
+    "week2": "Week 2: Advanced Practice"
+  },
+  "admission": {
+    "basicRequirements": "Basic Requirements",
+    "applicationMaterials": "Application Materials"
+  },
+  "image": "Image",
+  "hero": {
+    "explore": "Explore",
+    "learn": "Learn",
+    "grow": "Grow",
+    "subtitle": "Every EdGoing program is a carefully crafted adventure, designed to go beyond sightseeing—challenging assumptions, building empathy, and empowering Participants to see the world, and themselves, in new ways. Through these transformative experiences, we open minds, build bridges, and create memories that last a lifetime."
+  },
+  "banner": {
+    "summer2025": {
+      "title": "2025 Summer Study Tour",
+      "subtitle": "Deep-dive programs in 20+ global universities",
+      "cta": "Learn More"
+    },
+    "ukElite": {
+      "title": "UK Elite University Tour",
+      "subtitle": "Explore Oxford, Cambridge and more",
+      "cta": "Discover Now"
+    },
+    "japanTech": {
+      "title": "Japan Tech Innovation Tour",
+      "subtitle": "Where cutting-edge meets tradition",
+      "cta": "Join the Innovation"
+    },
+    "leadership": {
+      "title": "Global Leadership Summit",
+      "subtitle": "Empowering the next generation of world leaders",
+      "cta": "Be a Leader"
+    },
+    "sustainable": {
+      "title": "Sustainable Future Program",
+      "subtitle": "Learn to shape a greener tomorrow",
+      "cta": "Go Green"
+    }
+  },
+  "whyChoose": {
+    "title": "Student Support and Safety",
+    "subtitle": "We prioritize your health and safety first, providing comprehensive support services throughout your educational journey.",
+    "leadership": {
+      "title": "Experienced Leadership Team",
+      "description": "Our experienced team provides professional guidance and comprehensive support throughout your journey."
+    },
+    "education": {
+      "title": "High-Quality Education Programs",
+      "description": "Carefully designed programs with top partner institutions to provide excellent educational experiences."
+    },
+    "accommodation": {
+      "title": "Safe Accommodation and Healthy Dining",
+      "description": "Safe living environments and nutritious meals to ensure your health and well-being."
+    },
+    "support247": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock support services to provide continuous assistance for students."
+    },
+    "cultural": {
+      "title": "Immersive Cultural Experience",
+      "description": "Interactive activities and rich travel experiences to promote deep cultural learning."
+    },
+    "academic": {
+      "title": "Recognized Academic Excellence",
+      "description": "Courses recognized by top universities, enhancing your academic credentials."
+    }
+  },
+  "footer": {
+    "navigation": "NAVIGATION",
+    "contactUs": "CONTACT US",
+    "followUs": "FOLLOW US",
+    "nav": {
+      "home": "Home",
+      "worldStudy": "Study Abroad",
+      "chinaStudy": "Study in China",
+      "blog": "Blog",
+      "about": "About EdGoing",
+      "faq": "FAQ",
+      "contact": "Start Project"
+    },
+    "callUs": "Call Us",
+    "email": "Email",
+    "address": "Address",
+    "locations": "Shanghai | Singapore",
+    "shanghai": "Shanghai",
+    "shanghaiAddress": "18F, Tower B, 838 South Huangpi Road",
+    "shanghaiDistrict": "Huangpu District, Shanghai, 200025",
+    "singapore": "Singapore",
+    "singaporeAddress": "9 Kelantan Lane #06-01",
+    "singaporePostal": "Singapore 208628",
+    "followDescription": "Follow us on social media for updates and educational insights",
+    "copyright": "2025 EdGoing. All rights reserved."
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "We have established deep partnerships with top universities and educational institutions worldwide to provide quality educational resources and learning opportunities for our students.",
+    "universities": "Partner Universities",
+    "organizations": "Partner Organizations",
+    "stats": {
+      "universities": "Partner Universities",
+      "countries": "Countries Covered",
+      "programs": "Programs Available",
+      "students": "Students Benefited"
+    }
+  },
+  "common": {
+    "loading": "Loading..."
+  },
+  "programList": {
+    "type": "Type",
+    "city": "City",
+    "duration": "Duration",
+    "deadline": "Deadline",
+    "noPrograms": "No programs available",
+    "noCityAssigned": "No city assigned"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "search": {
+    "filterPrograms": "Filter Programs",
+    "programType": "Program Type",
+    "city": "City",
+    "gradeLevel": "Grade Level"
+  },
+  "programDetail": {
+    "projectType": "Type",
+    "duration": "Duration",
+    "city": "City",
+    "gradeLevel": "Grade Level",
+    "sessions": "Sessions",
+    "deadline": "Deadline",
+    "projectIntroduction": "Project Introduction",
+
+    "week1Title": "Week 1: Foundation Learning",
+    "week2Title": "Week 2: Advanced Practice",
+    "defaultHighlights": {
+      "highlight1": "Visit top technology companies and innovation centers",
+      "highlight2": "Hands-on experience with cutting-edge technology",
+      "highlight3": "Networking with industry professionals",
+      "highlight4": "Cultural immersion and city exploration",
+      "highlight5": "Certificate of completion from partner institutions"
+    },
+    "defaultAcademics": {
+      "academic1": "History of Chinese Technology Development",
+      "academic2": "Artificial Intelligence Application Cases",
+      "academic3": "5G Technology Development",
+      "academic4": "Technology Entrepreneurship Ecosystem",
+      "academic5": "Innovation and Future Trends"
+    },
+    "defaultItinerary": {
+      "week1": {
+        "item1": "Days 1-2: Overview of Shenzhen Technology Development",
+        "item2": "Days 3-4: Huawei Company Visit Experience",
+        "item3": "Days 5-6: Tencent Headquarters Exploration",
+        "item4": "Days 7: Technology Park In-depth Tour"
+      },
+      "week2": {
+        "item1": "Days 8-9: Startup Incubator Visits",
+        "item2": "Days 10-11: Innovation Lab Workshops",
+        "item3": "Days 12-13: Technology Project Presentations",
+        "item4": "Days 14: Program Conclusion and Certification"
+      }
+    },
+    "defaultRequirements": {
+      "requirement1": "Age 16-24 years old",
+      "requirement2": "STEM background preferred",
+      "requirement3": "Strong interest in technology innovation",
+      "requirement4": "Basic English communication skills"
+    }
+  },
+  "contact": {
+    "form": {
+      "fields": {
+        "privacyConsent": "I have read and agree to the",
+        "privacyPolicy": "Privacy Policy",
+        "role": {
+          "label": "Your Role*",
+          "placeholder": "Select your role",
+          "student": "Student",
+          "parent": "Parent",
+          "teacher": "Teacher",
+          "administrator": "School Administrator",
+          "consultant": "Educational Consultant",
+          "other": "Other"
+        },
+        "schoolName": "School Name",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "grade": "Grade/Education Level",
+        "province": "Province/State",
+        "city": "City",
+        "destinations": "Preferred Destinations",
+        "learningInterests": "Learning Interests",
+        "message": "Message",
+        "consent": "I agree to receive program information and updates from EdGoing"
+      },
+      "placeholders": {
+        "firstName": "Enter your first name",
+        "lastName": "Enter your last name",
+        "email": "Enter your email address",
+        "phone": "Enter your phone number",
+        "schoolName": "Enter your school name",
+        "grade": "Select your grade/education level",
+        "province": "Select your province/state",
+        "city": "Select your city",
+        "message": "Tell us about your needs and questions..."
+      },
+      "validation": {
+        "required": "This field is required",
+        "email": "Please enter a valid email address",
+        "phone": "Please enter a valid phone number",
+        "privacyRequired": "Please read and agree to the Privacy Policy"
+      },
+      "success": {
+        "title": "Success",
+        "description": "Thank you for your submission! We'll respond within 2 business days.",
+        "simple": "Submission Successful"
+      },
+      "error": {
+        "title": "Error",
+        "description": "An error occurred. Please try again."
+      }
+    }
+  }
+}

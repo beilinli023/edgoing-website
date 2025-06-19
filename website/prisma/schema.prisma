@@ -1,0 +1,628 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model applications {
+  id           String   @id
+  programId    String
+  studentName  String
+  studentEmail String
+  studentPhone String?
+  studentAge   Int?
+  parentName   String?
+  parentEmail  String?
+  parentPhone  String?
+  status       String   @default("PENDING")
+  notes        String?
+  submittedAt  DateTime @default(now())
+  updatedAt    DateTime
+  programs     programs @relation(fields: [programId], references: [id])
+}
+
+model blog_carousels {
+  id      String @id
+  blogId  String
+  mediaId String
+  order   Int    @default(0)
+  media   media  @relation(fields: [mediaId], references: [id], onDelete: Cascade)
+  blogs   blogs  @relation(fields: [blogId], references: [id], onDelete: Cascade)
+
+  @@unique([blogId, mediaId])
+}
+
+model blog_translations {
+  id       String @id
+  blogId   String
+  language String
+  title    String
+  slug     String
+  content  String
+  author   String
+  program  String
+  grade    String
+  blogs    blogs  @relation(fields: [blogId], references: [id], onDelete: Cascade)
+
+  @@unique([blogId, language])
+}
+
+model blogs {
+  id                String              @id
+  title             String
+  slug              String              @unique
+  content           String
+  author            String
+  program           String
+  grade             String
+  status            String              @default("PUBLISHED")
+  language          String              @default("zh")
+  imageId           String?
+  order             Int                 @default(0)
+  publishedAt       DateTime?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  authorId          String
+  blog_carousels    blog_carousels[]
+  blog_translations blog_translations[]
+  media             media?              @relation(fields: [imageId], references: [id])
+  users             users               @relation(fields: [authorId], references: [id])
+}
+
+model china_applications {
+  id             String         @id
+  programId      String
+  studentName    String
+  studentEmail   String
+  studentPhone   String?
+  studentAge     Int?
+  parentName     String?
+  parentEmail    String?
+  parentPhone    String?
+  status         String         @default("PENDING")
+  notes          String?
+  submittedAt    DateTime       @default(now())
+  updatedAt      DateTime
+  china_programs china_programs @relation(fields: [programId], references: [id])
+}
+
+model china_program_translations {
+  id             String         @id
+  programId      String
+  language       String
+  title          String
+  description    String
+  duration       String?
+  highlights     String?
+  academics      String?
+  itinerary      String?
+  requirements   String?
+  sessions       String?
+  materials      String?
+  china_programs china_programs @relation(fields: [programId], references: [id], onDelete: Cascade)
+
+  @@unique([programId, language])
+}
+
+model china_programs {
+  id                         String                       @id
+  title                      String
+  slug                       String                       @unique
+  description                String
+  status                     String                       @default("DRAFT")
+  language                   String                       @default("zh")
+  country                    String?
+  cityId                     String?
+  duration                   String
+  deadline                   DateTime?
+  featuredImage              String?
+  gallery                    String?
+  highlights                 String?
+  academics                  String?
+  itinerary                  String?
+  requirements               String?
+  type                       String?
+  gradeLevel                 String?
+  sessions                   String?
+  publishedAt                DateTime?
+  createdAt                  DateTime                     @default(now())
+  updatedAt                  DateTime
+  authorId                   String
+  china_applications         china_applications[]
+  china_program_translations china_program_translations[]
+  cities                     cities?                      @relation(fields: [cityId], references: [id])
+  users                      users                        @relation(fields: [authorId], references: [id])
+}
+
+model cities {
+  id                     String                   @id
+  name                   String
+  nameEn                 String?
+  countryId              String
+  isActive               Boolean                  @default(true)
+  order                  Int                      @default(0)
+  createdAt              DateTime                 @default(now())
+  updatedAt              DateTime
+  china_programs         china_programs[]
+  countries              countries                @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  international_programs international_programs[]
+
+  @@unique([name, countryId])
+}
+
+model countries {
+  id        String   @id
+  name      String
+  nameEn    String?
+  code      String?
+  isActive  Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  cities    cities[]
+}
+
+model faq_translations {
+  id       String @id
+  faqId    String
+  language String
+  question String
+  answer   String
+  faqs     faqs   @relation(fields: [faqId], references: [id], onDelete: Cascade)
+
+  @@unique([faqId, language])
+}
+
+model faqs {
+  id               String             @id
+  question         String
+  answer           String
+  category         String?
+  isActive         Boolean            @default(true)
+  order            Int                @default(0)
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime
+  authorId         String
+  faq_translations faq_translations[]
+  users            users              @relation(fields: [authorId], references: [id])
+}
+
+model grade_levels {
+  id          String   @id
+  name        String
+  nameEn      String?
+  description String?
+  isActive    Boolean  @default(true)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model hero_pages {
+  id         String   @id
+  pageName   String   @unique
+  pageType   String   @default("SECONDARY")
+  slides     String?
+  titleZh    String?
+  titleEn    String?
+  subtitleZh String?
+  subtitleEn String?
+  imageUrl   String?
+  isActive   Boolean  @default(true)
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+  authorId   String
+  users      users    @relation(fields: [authorId], references: [id])
+}
+
+model homepage_showcases {
+  id            String   @id
+  position      Int      @unique
+  programType   String
+  programSlug   String
+  titleZh       String?
+  titleEn       String?
+  programTypeZh String?
+  programTypeEn String?
+  cityZh        String?
+  cityEn        String?
+  isActive      Boolean  @default(true)
+  order         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime
+  authorId      String
+  users         users    @relation(fields: [authorId], references: [id])
+}
+
+model international_applications {
+  id                     String                 @id
+  programId              String
+  studentName            String
+  studentEmail           String
+  studentPhone           String?
+  studentAge             Int?
+  parentName             String?
+  parentEmail            String?
+  parentPhone            String?
+  status                 String                 @default("PENDING")
+  notes                  String?
+  submittedAt            DateTime               @default(now())
+  updatedAt              DateTime
+  international_programs international_programs @relation(fields: [programId], references: [id])
+}
+
+model international_program_translations {
+  id                     String                 @id
+  programId              String
+  language               String
+  title                  String
+  description            String
+  duration               String?
+  highlights             String?
+  academics              String?
+  itinerary              String?
+  requirements           String?
+  sessions               String?
+  materials              String?
+  international_programs international_programs @relation(fields: [programId], references: [id], onDelete: Cascade)
+
+  @@unique([programId, language])
+}
+
+model international_programs {
+  id                                 String                               @id
+  title                              String
+  slug                               String                               @unique
+  description                        String
+  status                             String                               @default("DRAFT")
+  language                           String                               @default("zh")
+  country                            String?
+  cityId                             String?
+  duration                           String
+  deadline                           DateTime?
+  featuredImage                      String?
+  gallery                            String?
+  highlights                         String?
+  academics                          String?
+  itinerary                          String?
+  requirements                       String?
+  type                               String?
+  gradeLevel                         String?
+  sessions                           String?
+  publishedAt                        DateTime?
+  createdAt                          DateTime                             @default(now())
+  updatedAt                          DateTime
+  authorId                           String
+  international_applications         international_applications[]
+  international_program_translations international_program_translations[]
+  cities                             cities?                              @relation(fields: [cityId], references: [id])
+  users                              users                                @relation(fields: [authorId], references: [id])
+}
+
+model media {
+  id             String           @id
+  filename       String
+  originalName   String
+  mimeType       String
+  size           Int
+  url            String
+  alt            String?
+  caption        String?
+  order          Int              @default(0)
+  uploadedBy     String
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime
+  blog_carousels blog_carousels[]
+  blogs          blogs[]
+  users          users            @relation(fields: [uploadedBy], references: [id])
+  testimonials   testimonials[]
+  videos         videos[]
+}
+
+model newsletters {
+  id             String    @id
+  email          String    @unique
+  name           String?
+  language       String    @default("zh")
+  isActive       Boolean   @default(true)
+  subscribedAt   DateTime  @default(now())
+  unsubscribedAt DateTime?
+}
+
+model page_translations {
+  id             String  @id
+  pageId         String
+  language       String
+  title          String
+  content        String
+  seoTitle       String?
+  seoDescription String?
+  pages          pages   @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([pageId, language])
+}
+
+model pages {
+  id                String              @id
+  title             String
+  slug              String              @unique
+  content           String
+  status            String              @default("DRAFT")
+  language          String              @default("zh")
+  template          String?
+  seoTitle          String?
+  seoDescription    String?
+  publishedAt       DateTime?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  authorId          String
+  page_translations page_translations[]
+  users             users               @relation(fields: [authorId], references: [id])
+}
+
+model partner_logos {
+  id          String   @id
+  companyName String
+  logoUrl     String
+  websiteUrl  String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  uploadedBy  String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+  users       users    @relation(fields: [uploadedBy], references: [id])
+}
+
+model partners {
+  id          String   @id
+  name        String
+  logo        String?
+  website     String?
+  description String?
+  isActive    Boolean  @default(true)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model program_translations {
+  id             String   @id
+  programId      String
+  language       String
+  title          String
+  description    String
+  content        String
+  highlights     String?
+  academics      String?
+  itinerary      String?
+  requirements   String?
+  materials      String?
+  seoTitle       String?
+  seoDescription String?
+  programs       programs @relation(fields: [programId], references: [id], onDelete: Cascade)
+
+  @@unique([programId, language])
+}
+
+model program_types {
+  id          String   @id
+  name        String
+  nameEn      String?
+  description String?
+  isActive    Boolean  @default(true)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model programs {
+  id                   String                 @id
+  title                String
+  slug                 String                 @unique
+  description          String
+  content              String
+  status               String                 @default("DRAFT")
+  language             String                 @default("zh")
+  country              String
+  city                 String
+  duration             String
+  price                Float?
+  currency             String                 @default("CNY")
+  maxStudents          Int?
+  minAge               Int?
+  maxAge               Int?
+  startDate            DateTime?
+  endDate              DateTime?
+  deadline             DateTime?
+  featuredImage        String?
+  gallery              String?
+  highlights           String?
+  academics            String?
+  itinerary            String?
+  requirements         String?
+  materials            String?
+  seoTitle             String?
+  seoDescription       String?
+  publishedAt          DateTime?
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime
+  authorId             String
+  applications         applications[]
+  program_translations program_translations[]
+  users                users                  @relation(fields: [authorId], references: [id])
+}
+
+model sessions {
+  id        String   @id
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  users     users    @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model setting_translations {
+  id        String   @id
+  settingId String
+  language  String
+  value     String
+  settings  settings @relation(fields: [settingId], references: [id], onDelete: Cascade)
+
+  @@unique([settingId, language])
+}
+
+model settings {
+  id                   String                 @id
+  key                  String
+  value                String
+  type                 String                 @default("TEXT")
+  language             String                 @default("zh")
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime
+  setting_translations setting_translations[]
+
+  @@unique([key, language])
+}
+
+model testimonial_translations {
+  id            String       @id
+  testimonialId String
+  language      String
+  content       String
+  author        String
+  role          String
+  program       String
+  testimonials  testimonials @relation(fields: [testimonialId], references: [id], onDelete: Cascade)
+
+  @@unique([testimonialId, language])
+}
+
+model testimonials {
+  id                       String                     @id
+  content                  String
+  author                   String
+  role                     String
+  program                  String
+  status                   String                     @default("PUBLISHED")
+  language                 String                     @default("zh")
+  imageId                  String?
+  order                    Int                        @default(0)
+  publishedAt              DateTime?
+  createdAt                DateTime                   @default(now())
+  updatedAt                DateTime
+  authorId                 String
+  testimonial_translations testimonial_translations[]
+  media                    media?                     @relation(fields: [imageId], references: [id])
+  users                    users                      @relation(fields: [authorId], references: [id])
+}
+
+model china_provinces {
+  id           String         @id
+  nameZh       String
+  nameEn       String
+  code         String         @unique
+  order        Int            @default(0)
+  china_cities china_cities[]
+
+  @@map("china_provinces")
+}
+
+model china_cities {
+  id             String          @id
+  nameZh         String
+  nameEn         String
+  code           String          @unique
+  provinceId     String
+  order          Int             @default(0)
+  china_province china_provinces @relation(fields: [provinceId], references: [id], onDelete: Cascade)
+
+  @@map("china_cities")
+}
+
+model contact_submissions {
+  id                String   @id
+  role              String
+  schoolName        String?
+  firstName         String
+  lastName          String
+  email             String
+  phone             String
+  grade             String?
+  province          String?
+  city              String?
+  destinations      String?
+  learningInterests String?
+  message           String?
+  consent           Boolean  @default(false)
+  status            String   @default("NEW")
+  notes             String?
+  submittedAt       DateTime @default(now())
+  updatedAt         DateTime @default(now())
+}
+
+model users {
+  id                     String                   @id
+  email                  String                   @unique
+  username               String                   @unique
+  password               String
+  role                   String                   @default("EDITOR")
+  name                   String?
+  avatar                 String?
+  createdAt              DateTime                 @default(now())
+  updatedAt              DateTime
+  blogs                  blogs[]
+  china_programs         china_programs[]
+  faqs                   faqs[]
+  hero_pages             hero_pages[]
+  homepage_showcases     homepage_showcases[]
+  international_programs international_programs[]
+  media                  media[]
+  pages                  pages[]
+  partner_logos          partner_logos[]
+  programs               programs[]
+  sessions               sessions[]
+  testimonials           testimonials[]
+  videos                 videos[]
+}
+
+model videos {
+  id            String   @id
+  slug          String   @unique
+  isPublished   Boolean  @default(false)
+  order         Int      @default(0)
+  categoryZh    String
+  categoryEn    String
+  titleZh       String
+  titleEn       String
+  descriptionZh String
+  descriptionEn String
+  thumbnailId   String?
+  videoFile     String?
+  videoUrl      String?
+  uploadedBy    String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime
+  users         users    @relation(fields: [uploadedBy], references: [id])
+  media         media?   @relation(fields: [thumbnailId], references: [id])
+}
+
+model email_notifications {
+  id                       String   @id
+  smtpHost                 String?
+  smtpPort                 Int?
+  smtpUser                 String?
+  smtpPassword             String?
+  smtpSecure               Boolean  @default(true)
+  fromEmail                String?
+  fromName                 String?
+  notificationEmails       String?
+  contactSubmissionEnabled Boolean  @default(false)
+  newsletterEnabled        Boolean  @default(false)
+  isActive                 Boolean  @default(false)
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime
+}

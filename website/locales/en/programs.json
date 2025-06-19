@@ -1,0 +1,146 @@
+{
+  "singaporeAI": {
+    "title": "Singapore Innovation Camp & 7-Day Academic Journey",
+    "description": "This is a 7-day intensive learning program that combines lectures, corporate visits, cultural workshops, and team projects to explore the unlimited potential of artificial intelligence and innovative technology in Singapore, a frontier of science and technology.",
+    "duration": "1 week; 7 days",
+    "sessions": {
+      "session1": "July 10-16, 2025",
+      "session2": "August 10-16, 2025",
+      "session3": "August 24-30, 2025"
+    },
+    "deadline": "June 25, 2025",
+    "highlights": {
+      "highlight1": "Deep experience of the perfect integration of Singapore's traditional culture and modern innovation",
+      "highlight2": "Visit renowned companies to understand Singapore's digital economy development model",
+      "highlight3": "Exchange with local students to enhance cross-cultural communication skills",
+      "highlight4": "Professional mentor guidance and academic certification",
+      "highlight5": "Immersive language environment to rapidly improve English proficiency"
+    },
+    "academics": {
+      "academic1": "Artificial Intelligence Fundamentals and Applications",
+      "academic2": "Data Science and Machine Learning",
+      "academic3": "Innovation Thinking and Design Thinking",
+      "academic4": "Cross-cultural Business Communication",
+      "academic5": "Project Management and Team Collaboration"
+    },
+    "itinerary": {
+      "item1": "Professional course learning",
+      "item2": "Campus visits and experiences",
+      "item3": "Cultural exchange activities",
+      "item4": "Team building activities",
+      "item5": "Practical project participation",
+      "item6": "Expert lectures",
+      "item7": "Field investigations",
+      "item8": "Results presentation"
+    },
+    "admission": {
+      "req1": "Age: 16-25 years old",
+      "req2": "Education: High school or above",
+      "req3": "Language: Basic English communication skills",
+      "req4": "Healthy and adaptable to group living",
+      "material1": "Application form",
+      "material2": "Personal statement",
+      "material3": "Academic transcripts",
+      "material4": "Recommendation letter (optional)",
+      "material5": "Passport copy"
+    }
+  },
+  "usArt": {
+    "title": "Youth Art Advanced Program",
+    "description": "You Nic Co collaborates with Mass Audubon to present the Youth Art Advanced Program, perfectly combining art and nature to inspire students' creativity and imagination. Through visits to nature reserves and learning about flora and fauna, students will create art under the guidance of experienced art teachers.",
+    "duration": "2 weeks; 14 days",
+    "sessions": {
+      "session1": "July 1-14, 2025",
+      "session2": "July 15-28, 2025",
+      "session3": "August 1-14, 2025"
+    },
+    "deadline": "June 15, 2025",
+    "highlights": {
+      "highlight1": "Instruction by experienced art teachers, cultivating proper painting habits in students",
+      "highlight2": "Study alongside students from around the world, improving English speaking skills",
+      "highlight3": "Carefully designed courses to expand students' creativity and imagination",
+      "highlight4": "Visit top art schools across the US, experiencing the artistic atmosphere of prestigious institutions",
+      "highlight5": "24/7 safety protection, ensuring students' personal safety throughout the course"
+    },
+    "academics": {
+      "academic1": "Art fundamentals theory and techniques",
+      "academic2": "Nature observation and sketching skills",
+      "academic3": "Creative thinking development",
+      "academic4": "Art history and cultural background",
+      "academic5": "Portfolio creation guidance"
+    },
+    "itinerary": {
+      "item1": "Art foundation course learning",
+      "item2": "Nature reserve visits and sketching",
+      "item3": "Art museum visits",
+      "item4": "Exchange with local artists",
+      "item5": "Creative practice projects",
+      "item6": "Art school visits",
+      "item7": "Exhibition preparation",
+      "item8": "Graduation exhibition"
+    },
+    "admission": {
+      "req1": "Age: 14-18 years old",
+      "req2": "Education: Middle school or above",
+      "req3": "Language: Basic English communication skills",
+      "req4": "Strong interest in art",
+      "material1": "Application form",
+      "material2": "Personal portfolio (optional)",
+      "material3": "Academic transcripts",
+      "material4": "Recommendation letter (optional)",
+      "material5": "Passport copy"
+    }
+  },
+  "types": {
+    "innovation": "Innovation Camp",
+    "stem": "STEM & Science Innovation",
+    "academic": "Academic Study",
+    "cultural": "Cultural Experience",
+    "language": "Language Intensive"
+  },
+  "singaporeScience": {
+    "title": "2025 Ayako Village International English Summer School",
+    "description": "Our international English summer school is a 14-day learning camp designed to provide comprehensive and natural immersive experiences to help students improve their English proficiency and experience Singapore culture.",
+    "duration": "2 weeks; 14 days",
+    "sessions": {
+      "session1": "July 5-18, 2025",
+      "session2": "August 5-18, 2025"
+    },
+    "deadline": "June 20, 2025",
+    "highlights": {
+      "highlight1": "Immersive English learning environment",
+      "highlight2": "Experience Singapore's multicultural diversity",
+      "highlight3": "Professional English teacher guidance",
+      "highlight4": "Rich extracurricular activities",
+      "highlight5": "Obtain international certification"
+    },
+    "academics": {
+      "academic1": "Comprehensive English listening, speaking, reading, and writing training",
+      "academic2": "Academic English writing skills",
+      "academic3": "Cross-cultural communication skills",
+      "academic4": "Speech and presentation abilities",
+      "academic5": "English literature appreciation"
+    },
+    "itinerary": {
+      "item1": "English foundation courses",
+      "item2": "Cultural experience activities",
+      "item3": "City exploration tours",
+      "item4": "Group discussion practice",
+      "item5": "Practical project presentations",
+      "item6": "Local school visits",
+      "item7": "Graduation speech preparation",
+      "item8": "Certificate ceremony"
+    },
+    "admission": {
+      "req1": "Age: 12-18 years old",
+      "req2": "Education: Middle school or above",
+      "req3": "Language: Basic English proficiency",
+      "req4": "Active participation in learning activities",
+      "material1": "Application form",
+      "material2": "English proficiency test",
+      "material3": "Academic transcripts",
+      "material4": "Recommendation letter (optional)",
+      "material5": "Passport copy"
+    }
+  }
+}
