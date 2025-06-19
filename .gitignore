@@ -105,6 +105,7 @@ website/public/uploads/
 # 监控和分析
 # ==========================================
 monitoring/
+!website/lib/monitoring/
 .next/analyze/
 
 # ==========================================
